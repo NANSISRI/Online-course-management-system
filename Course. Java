@@ -1,0 +1,23 @@
+abstract class Course implements Enrollable {
+    private String name;
+    private double price;
+    private Instructor instructor;
+
+    public Course(String name, double price, Instructor instructor) {
+        this.name = name;
+        this.price = price;
+        this.instructor = instructor;
+    }
+
+    public String getName() { return name; }
+    public double getPrice() { return price; }
+    public Instructor getInstructor() { return instructor; }
+
+  
+    public abstract void showDetails();
+
+   
+    public double applyDiscount() {
+        return price; // default - no discount
+    }
+}
